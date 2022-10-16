@@ -1,0 +1,109 @@
+body, p, h1 {
+    margin: 0;
+    padding: 0;
+    background-image: url(cats.jpg);
+}
+h1 {
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(6, 6, 64);
+    padding: 10px 0;
+}
+main {
+   margin: 0 auto;
+}
+.puma__photo {
+    margin: 0 auto;
+    width: 276px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.puma__img {
+    height: 80vh;
+    display: block;
+    border-radius: 3px;
+    border:3px solid rgb(126, 71, 126);
+    position: absolute;   
+}
+.puma__bottom {
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+}
+.puma__description {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color:rgb(6, 6, 64);
+    background-image: none;
+}
+.puma__btns {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    gap:10px;
+}
+.btn {
+    width:30px;
+    height: 30px;
+    border: 5px solid rgb(172, 12, 95);
+    background-color:  rgb(172, 12, 95);
+    border-radius: 15px;
+    cursor: pointer;
+}
+.btn:hover {
+    border: 5px solid rgb(219, 160, 191);
+    background-color:  rgb(219, 160, 191);
+}
+.btn_active {
+    background-color:  rgb(219, 160, 191);
+    border: 3px solid rgb(172, 12, 95);
+}
+
+.animation-from-left {
+    animation-name: move-from-left; 
+    animation-duration: 1s;
+}
+@keyframes move-from-left {
+    0% { left:-300px;
+    opacity: 0.2;}
+    100% {left:0;
+        opacity: 1} }
+
+.animation-right {
+    animation-name: move-right; 
+    animation-duration: 1s;
+}
+@keyframes move-right {
+    0% { left:0;
+    opacity: 1;}
+    100% {left:300px;
+        opacity: 0.2} }
+
+@media (max-width:1023px) {
+h1 {
+    font-size: 20px;
+}
+.puma__bottom {
+    width: 100vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap:10px
+}
+.puma__img {
+    width:80vw;
+    height: auto;
+}
+.puma__description {
+    font-size: 15px;
+    order:1;
+    text-align: center;
+}
+.puma__btns {
+    order:0;
+    padding: 0 30px;
+}
+}
